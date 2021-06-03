@@ -1,19 +1,20 @@
-var arithmetic= require('./arithmetic');
+var arith= require('./arithmetic');
 
 function call_arithmetic(a,b){
-    console.log("We start here to solve with two number a = " + a + " , b = " + b);
-    console.log("The sum of the given numbers is "+ arithmetic.sum(a,b));
-    console.log("The difference of the given numbers is "+ arithmetic.difference(a,b));
-    console.log("The product of the given numbers is "+ arithmetic.multiply(a,b));
-    if(b<=0){
-        console.log("Division by zero and negative numbers are not allowed.");
-    }
-    else{
-        console.log("The qoutient of the given numbers is "+ arithmetic.divide(a,b));
-    }
-    console.log("\n");
-}
-
+    console.log("The value of length is " + a + " and breadth is "+ b);
+    arith(a,b,(err,arithmetic)=>{
+        if(err){
+            console.log("ERROR: "+err.message);
+        }
+        else{
+            console.log("The sum of the numbers is "+ arithmetic.sum());
+            console.log("The difference of the numbers is "+ arithmetic.difference());
+            console.log("The multiply of the numbers is "+ arithmetic.multiply());
+            console.log("The qoutient of the numbers is "+ arithmetic.divide());
+        }
+    });
+    console.log("THIS SHOWS MOVEMENT \n");
+};
 
 call_arithmetic(4,5);
 call_arithmetic(3,0);
