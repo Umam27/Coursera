@@ -1,9 +1,4 @@
-var arithmetic={
-    sum: (x,y)=> (x+y),
-    difference: (x,y)=> (x-y),
-    multiply: (x,y)=> (x*y),
-    divide: (x,y)=>(x/y)
-};
+var arithmetic= require('./arithmetic');
 
 function call_arithmetic(a,b){
     console.log("We start here to solve with two number a = " + a + " , b = " + b);
@@ -21,5 +16,5 @@ function call_arithmetic(a,b){
 
 
 call_arithmetic(4,5);
-call_arithmetic(3,-1);
+call_arithmetic(3,0);
 call_arithmetic(2,5);
