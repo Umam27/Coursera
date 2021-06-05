@@ -6,9 +6,15 @@ const hostname= 'localhost';
 const port= 3000;
 
 const dishrouter=require('./routes/dishrouter');
+const promorouter=require('./routes/promorouter');
+const leaderRouter=require('./routes/leaderRouter');
+
+const bodyparser= require('body-parser');
 
 app.use('/dishes', dishrouter);
-const bodyparser= require('body-parser');
+app.use('/promotions', promorouter);
+app.use('/leaders', leaderRouter);
+
 
 app.use(bodyparser.json());
 app.use(morgan('dev'));
