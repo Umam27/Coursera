@@ -58,4 +58,4 @@ const dishSchema = new Schema({
 
 var Promotions = mongoose.model('Promotion', dishSchema);
 
-module.exports = Dishes;
+module.exports = Promotions;

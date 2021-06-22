@@ -146,7 +146,7 @@ leaderRouter.route('/:leaderId/comments')
     .catch((err) => next(err));    
 });
 
-LeaderRouter.route('/:leaderId/comments/:commentId')
+leaderRouter.route('/:leaderId/comments/:commentId')
 .get((req,res,next) => {
     Leaders.findById(req.params.leaderId)
     .then((leader) => {
